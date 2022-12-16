@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+## Scripts disponibles
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En el directorio del proyecto, debemos realizar un :
 
-## Available Scripts
+### `npm install`
 
-In the project directory, you can run:
+para instalar las dependencias del proyecto.
+
+##luego desde el directorio del proyecto podemos utilizar los siguientes comandos:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para correr en modo desarrollo:
+Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este comando corre los test en modo interactivo pero no han sido implementados por falta de tiempo.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construye la aplicación para producción en la carpeta `build`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run lint`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ejecutará eslint
 
-### `npm run eject`
+### `npm run lint:fix`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+el linting intentará arreglar los cambios de manera automática y dejará aquellos que requieran de mayor atención por parte del developer.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Comentarios
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Si bien las url aportadas para la realización de este challenge fueron las dos siguientes: 1)https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json 2)https://itunes.apple.com/lookup?id={podcastId}
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+la segunda no poseía toda la información necesaria referente a los Episodios.
+por tal motivo, hallé en internet el sigiente foro del sitio web de apple:
+https://developer.apple.com/forums/thread/654141
 
-## Learn More
+en el mismo se propone una url similar a la segunda proporcionada para el challenge, pero con la funcionalidad agregada de los episodios. por lo que procedí a utilizar dicha url. Asimismo y para evitar un tiempo de respuesta mayor, limite a 10 la cantidad de episodios, pero puede ser modificado si así se requiere.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://itunes.apple.com/lookup?id=${id}&media=podcast&entity=podcastEpisode&limit=10
