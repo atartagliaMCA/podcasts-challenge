@@ -1,0 +1,13 @@
+.navbar {
+  align-items: center;
+  border-bottom: 1px solid var(--lightBlue);
+  display: flex;
+  font-style: italic;
+  height: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 2em;
+
+  h1 {
+    color: var(--darkBlue)
+  }
+}
