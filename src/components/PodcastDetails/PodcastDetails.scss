@@ -1,0 +1,19 @@
+.podcastDetails__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width:580px;
+
+  .podcastDetails__title {
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.35);
+    width: 100%;
+    padding: 7px;
+    margin: 0 0 10px;
+  }
+
+  .podcastDetails__episodes{
+    width:100%;
+  }
+}
