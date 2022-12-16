@@ -2,10 +2,6 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import "./Search.scss";
 
 export function Search({ search, setSearch }) {
-  const handleChange = (evt) => {
-    setSearch(evt.target.value);
-  };
-
   return (
     <div className="search__container">
       <input
@@ -13,7 +9,7 @@ export function Search({ search, setSearch }) {
         name="search"
         placeholder="Search Podcast..."
         className="search__input"
-        onChange={(evt) => handleChange(evt)}
+        onChange={(evt) => setSearch(evt.target.value)}
         value={search}
       />
       <button className="search__button">

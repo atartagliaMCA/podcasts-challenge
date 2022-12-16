@@ -14,7 +14,7 @@ export function Episode() {
       );
       setEpisode(filteredEpisode[0]);
     });
-  }, [podcastId]);
+  }, [episodeId, podcastId]);
 
   return (
     <div className="episode__container">

@@ -8,7 +8,7 @@ export function PodcastDetails() {
   return (
     <section className="podcastDetails__container">
       <div className="podcastDetails__title">
-        <h3> Episodes: {episodes.trackCount}</h3>
+        <h3 data-testid="episodes-title"> Episodes: {episodes.trackCount}</h3>
       </div>
       <div className="podcastDetails__episodes">
         <Episodes id={episodes.trackId} />
